@@ -1,8 +1,18 @@
 @import "tailwindcss";
 
+/*
+ * The app is light-only. An earlier version flipped --foreground to #ededed
+ * under prefers-color-scheme: dark, which was silently inherited by every
+ * light surface: <body> painted its own background, and DashboardShell's light
+ * theme set a background but no text colour, so dashboard text turned
+ * near-white on a white card in OS dark mode.
+ *
+ * Both tokens are now pinned. The delivery dashboard is the one genuinely dark
+ * surface and it sets its own colours through DashboardShell's dark theme.
+ */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a;
 }
 
 @theme inline {
@@ -12,15 +22,30 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/*
+ * These element defaults live in @layer base so Tailwind's utilities win over
+ * them. Unlayered rules beat every @layer regardless of specificity, so
+ * `body { background: var(--background) }` used to override the bg-emerald-50
+ * utility on <body> in app/layout.tsx and the page rendered white instead.
+ */
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    /*
+     * This used to be `font-family: Arial, Helvetica, sans-serif`, which meant
+     * the two Geist fonts next/font downloads in app/layout.tsx were wired to
+     * --font-geist-sans/--font-geist-mono and then never referenced, so the
+     * whole storefront rendered in Arial.
+     */
+    font-family: var(--font-geist-sans), ui-sans-serif, system-ui,
+      -apple-system, "Segoe UI", Roboto, sans-serif;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  code,
+  pre,
+  kbd,
+  samp {
+    font-family: var(--font-geist-mono), ui-monospace, monospace;
+  }
 }
