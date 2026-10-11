@@ -292,7 +292,7 @@ step; different browsers or devices are separate.
 
 You can view the live version of the website here:
 
-👉 **[Open AgriCart]()**
+👉 **[Open AgriCart](https://agricart-farm-to-door.vercel.app/)**
 
 There is no shared backend, so there are no logins to share. Your data lives in your own browser. To try the full flow:
 
