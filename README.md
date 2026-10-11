@@ -14,6 +14,40 @@ A modern, full-featured farm-to-door marketplace for farm-fresh produce, dairy, 
 
 ---
 
+## 📸 Screenshots
+
+### Storefront
+
+|                       Home                        |                 Fresh produce                  |
+| :-----------------------------------------------: | :--------------------------------------------: |
+|   ![Home page](docs/screenshots/home-hero.png)    | ![Product grid](docs/screenshots/products.png) |
+|               **Meet our farmers**                |             **Sign in / register**             |
+| ![Featured farmers](docs/screenshots/farmers.png) |   ![Login page](docs/screenshots/login.png)    |
+
+### Cart & checkout
+
+|                Cart                |                    Simulated payment                    |
+| :--------------------------------: | :-----------------------------------------------------: |
+| ![Cart](docs/screenshots/cart.png) | ![Payment modal](docs/screenshots/checkout-payment.png) |
+
+### Dashboards
+
+|                            Customer                            |                         Order tracking                          |
+| :------------------------------------------------------------: | :-------------------------------------------------------------: |
+| ![Customer dashboard](docs/screenshots/customer-dashboard.png) | ![Order timeline](docs/screenshots/delivery-order-tracking.png) |
+|                           **Farmer**                           |                      **Delivery partner**                       |
+|   ![Farmer dashboard](docs/screenshots/farmer-dashboard.png)   | ![Delivery dashboard](docs/screenshots/delivery-dashboard.png)  |
+|                           **Admin**                            |                                                                 |
+|    ![Admin dashboard](docs/screenshots/admin-dashboard.png)    |                                                                 |
+
+### Mobile
+
+|                   Mobile Home Page                    |                          Mobile Dashboard                           |
+| :---------------------------------------------------: | :-----------------------------------------------------------------: |
+| ![Mobile Home Page](docs/screenshots/mobile-home.png) | ![Mobile Dashboard](docs/screenshots/mobile-customer-dashboard.png) |
+
+---
+
 ## ✨ Key Features
 
 ### 🛍️ Complete E-Commerce
